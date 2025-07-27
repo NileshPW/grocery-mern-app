@@ -4,7 +4,7 @@ import { dummyProducts } from "../assets/assets";
 import toast from "react-hot-toast";
 import axios from "axios";
 axios.defaults.withCredentials = true;
-axios.defaults.baseURL = import.meta.https://grocery-mern-app-backend.onrender.com;
+axios.defaults.baseURL = import.meta."https://grocery-mern-app-backend.onrender.com";
 export const AppContext = createContext(null);
 
 export const AppContextProvider = ({ children }) => {
