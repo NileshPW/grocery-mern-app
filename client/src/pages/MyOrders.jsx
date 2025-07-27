@@ -1,6 +1,5 @@
 import { useContext, useEffect, useState } from "react";
-import { dummyOrders } from "../assets/assets";
-import { AppContext } from "../context/AppContext";
+import { AppContext } from "../context/appContext";
 import toast from "react-hot-toast";
 
 const MyOrders = () => {
@@ -38,7 +37,7 @@ const MyOrders = () => {
           <p className="flex justify-between items-center gap-6 ">
             <span>orderId :{order._id} </span>
             <span>payment :{order.paymentType} </span>
-            <span>Total Amount :${order.amount} </span>
+            <span>Total Amount :&#8377;{order.amount} </span>
           </p>
           {order.items.map((item, index) => (
             <div
@@ -68,7 +67,7 @@ const MyOrders = () => {
                 <p>Date:{new Date(order.createdAt).toLocaleString()}</p>
               </div>
               <p className=" text-lg">
-                Amount:${item.product.offerPrice * item.quantity}
+                Amount:&#8377;{item.product.offerPrice * item.quantity}
               </p>
             </div>
           ))}

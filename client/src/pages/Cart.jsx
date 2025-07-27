@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
-import { useAppContext } from "../context/AppContext";
-import { dummyAddress } from "../assets/assets";
+import { useAppContext } from "../context/appContext";
 import axios from "axios";
 import toast from "react-hot-toast";
 const Cart = () => {
@@ -151,7 +150,7 @@ const Cart = () => {
               </div>
             </div>
             <p className="text-center">
-              ${product.offerPrice * product.quantity}
+              &#8377;{product.offerPrice * product.quantity}
             </p>
             <button
               onClick={() => removeFromCart(product._id)}
@@ -256,7 +255,7 @@ const Cart = () => {
         <div className="text-gray-500 mt-4 space-y-2">
           <p className="flex justify-between">
             <span>Price</span>
-            <span>${totalCartAmount()}</span>
+            <span>&#8377;{totalCartAmount()}</span>
           </p>
           <p className="flex justify-between">
             <span>Shipping Fee</span>
@@ -264,11 +263,11 @@ const Cart = () => {
           </p>
           <p className="flex justify-between">
             <span>Tax (2%)</span>
-            <span>${(totalCartAmount() * 2) / 100}</span>
+            <span>&#8377;{(totalCartAmount() * 2) / 100}</span>
           </p>
           <p className="flex justify-between text-lg font-medium mt-3">
             <span>Total Amount:</span>
-            <span>${totalCartAmount() + (totalCartAmount() * 2) / 100}</span>
+            <span>&#8377;{totalCartAmount() + (totalCartAmount() * 2) / 100}</span>
           </p>
         </div>
 
